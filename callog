@@ -1,0 +1,10 @@
+import json
+with open('sample.json') as data_file:
+	data = json.load(data_file)
+
+list1 = []
+c=0;
+for i in data["users"]["352136067843470"]["callList"]:
+	list1.append(data["users"]["352136067843470"]["callList"]["c"]["number"])
+	c+=1;
+print (c)
