@@ -38,6 +38,6 @@ for i in users.shallow().get(user['idToken']).each():
 	print i
 
 for u in users.shallow().get(user['idToken']).each():
-	print "Iam appending {} to the file jsonto.csv. Please don't tamper with that file!".format(u)
+	print "I am appending {} to the file jsonto.csv. Please don't tamper with that file!".format(u)
 	kompare_prod = Json(dict(users.child(u).get(user['idToken']).val()))
 	kompare_prod.convert_to_csv(filename = "jsonto.csv", delimiter = "`", write_mode = 'a')
